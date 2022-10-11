@@ -1,12 +1,14 @@
 import React from 'react';
 import './Option.css';
 
-const Option = ({ option }) => {
-
+const Option = ({ option, index, question }) => {
+    console.log(question.id);
     return (
         <div className='text-left my-2 flex content-center'>
-            <input type="radio" id="html" name="fav_language" value={option} className='mr-3' />
-            <label for={option}>{option}</label>
+            <label htmlFor=''>
+                <input type="radio" id={index} name={question.id} value={option} />
+                {option}
+            </label>
         </div>
     );
 };

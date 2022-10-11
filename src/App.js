@@ -5,6 +5,7 @@ import Statistics from './components/Statistics/Statistics';
 import Topics from './components/Topics/Topics';
 import Main from './layouts/Main/Main';
 import Blog from './components/Blog/Blog';
+import Home from './components/Home/Home';
 
 function App() {
   const router = createBrowserRouter([
@@ -14,6 +15,11 @@ function App() {
       children: [
         {
           path: '/',
+          loader: () => fetch('tshirts.json'),
+          element: <Home></Home>
+        },
+        {
+          path: '/topics',
           loader: () => fetch('tshirts.json'),
           element: <Topics></Topics>
         },

@@ -1,0 +1,12 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav-item a {
+    margin-right: 20px;
+    text-decoration: none;
+}

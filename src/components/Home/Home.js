@@ -1,9 +1,15 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Quiz from '../Quiz/Quiz'
 import './Home.css'
 const Home = () => {
+    const quizes = useLoaderData();
+    const allQuizes = quizes.data
+    console.log(allQuizes);
     return (
-        <div>
-            <div className="header-info px-20">
+        <div className='px-20'>
+
+            <div className="header-info ">
                 <div className="header-img w-1/2">
                     <img className='w-full' src="/cover.jpg" alt="" />
                 </div>
@@ -13,6 +19,15 @@ const Home = () => {
                     <p>Let's start today to learn new thing</p>
                 </div>
             </div>
+            <div className="quizes grid grid-cols-3 gap-4">
+                {
+                    allQuizes.map(quiz => <Quiz
+                        key={quiz.id}
+                        quiz={quiz}
+                    ></Quiz>)
+                }
+            </div>
+
         </div>
     );
 };

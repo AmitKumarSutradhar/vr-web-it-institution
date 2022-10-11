@@ -6,6 +6,7 @@ import Topics from './components/Topics/Topics';
 import Main from './layouts/Main/Main';
 import Blog from './components/Blog/Blog';
 import Home from './components/Home/Home';
+import QuizDetail from './components/QuizDetails/QuizDetail';
 
 function App() {
   const router = createBrowserRouter([
@@ -20,7 +21,7 @@ function App() {
         },
         {
           path: '/topics',
-          loader: () => fetch('tshirts.json'),
+          // loader: () => fetch('tshirts.json'),
           element: <Topics></Topics>
         },
         {
@@ -30,8 +31,19 @@ function App() {
         {
           path: '/blog',
           element: <Blog></Blog>
+        },
+        {
+          path: 'quiz/:quizId',
+          loader: async ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+          },
+          element: <QuizDetail></QuizDetail>
         }
       ]
+    },
+    {
+      path: '*',
+      element: <div>Sorry.This page is not Available.</div>
     }
   ])
   return (

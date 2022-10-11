@@ -1,11 +1,18 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Quiz from '../Quiz/Quiz'
+import Quiz from '../Quiz/Quiz';
 import './Home.css'
 const Home = () => {
+
+    // const navigate = useNavigate();
     const quizes = useLoaderData();
     const allQuizes = quizes.data
-    console.log(allQuizes);
+    // console.log(allQuizes);
+
+    const handleStartQuiz = (id) => {
+        // console.log(id);
+
+    }
     return (
         <div className='px-20'>
 
@@ -24,6 +31,7 @@ const Home = () => {
                     allQuizes.map(quiz => <Quiz
                         key={quiz.id}
                         quiz={quiz}
+                        handleStartQuiz={handleStartQuiz}
                     ></Quiz>)
                 }
             </div>

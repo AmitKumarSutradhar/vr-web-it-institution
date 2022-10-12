@@ -15,7 +15,7 @@ const Question = ({ question }) => {
                     <h2 className='md:text-3xl text-xl font-bold text-left my-5'>Quiz { } {question.question}</h2>
                     <div className="">
                         <div onClick={() => setOpen(!open)}>
-                            {open ? <EyeIcon className="h-6 w-6 text-blue-500" /> : <EyeSlashIcon className="h-6 w-6 text-blue-500" />}
+                            {open ? <EyeIcon className="h-6 w-6 text-blue-900" /> : <EyeSlashIcon className="h-6 w-6 text-blue-900" />}
                         </div>
 
                     </div>
@@ -29,8 +29,8 @@ const Question = ({ question }) => {
                     ></Option>)
                 }
             </div>
-            <div className={`${open ? 'block' : 'hidden'}`}>
-                <h3>Correct answet is: {question.correctAnswer}</h3>
+            <div className={`${open ? 'block rounded-lg border bg-blue-900 text-white shadow-md ' : 'hidden rounded-lg border border-gray-200 shadow-md'}`}>
+                <h3 className='p-3'>Correct answet is: {question.correctAnswer}</h3>
             </div>
         </div>
     );

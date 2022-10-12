@@ -10,7 +10,7 @@ const Quiz = ({ quiz, handleStartQuiz }) => {
                 <h3 className='text-3xl font-bold my-4'>{name}</h3>
                 <p>Total Questions: {total}</p>
             </div>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-6"><Link to={`/quiz/${id}`}>Start Quiz</Link></button>
+            <button className="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-12 rounded my-6"><Link to={`/quiz/${id}`}>Start Quiz</Link></button>
         </div>
     );
 };

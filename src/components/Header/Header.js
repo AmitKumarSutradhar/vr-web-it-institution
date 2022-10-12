@@ -1,19 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import './Header.css';
+import NavItem from '../NavItem/NavItem';
 
 const Header = () => {
+    const [open, setOpen] = useState(false);
+    const routes = [
+        { id: 1, name: 'Home', path: '/' },
+        { id: 2, name: 'Topics', path: '/topics' },
+        { id: 3, name: 'Statistics', path: '/statistics' },
+        { id: 4, name: 'Blog', path: '/blog' }
+    ]
     return (
-        <div className="header bg-slate-400 text-slate-50 mb-10">
-            <div className="nav-container py-10">
+        <div className="header text-slate-50 mb-10">
+            <div className="nav-container flex justify-between py-10">
                 <div className="logo">
-                    <h2><span>VR</span> Web Dev</h2>
+                    <h2 className='text-2xl font-semibold'><span className='bg-white text-black font-bold rounded-xl p-2'>VR</span> Web Dev</h2>
                 </div>
-                <nav className='nav-item'>
-                    <Link to='/'>Home</Link>
-                    <Link to='/topics'>Topics</Link>
-                    <Link to='/statistics'>Statistics</Link>
-                    <Link to='/blog'>Blog</Link>
+                <nav className=''>
+                    <div onClick={() => setOpen(!open)} className="h-6 w-6 md:hidden">
+                        {open ? <XMarkIcon /> : <Bars3Icon />}
+                    </div>
+                    <ul className={`w-full md:flex sm:flex-row justify-center absolute duration-300 ease-in md:static ${open ? ' right-0' : 'top-[-500px]'}`}>
+                        {
+                            routes.map(route => <NavItem key={route.id} route={route}></NavItem>)
+                        }
+                    </ul>
                 </nav>
             </div>
         </div>

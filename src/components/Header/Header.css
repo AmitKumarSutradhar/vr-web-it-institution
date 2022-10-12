@@ -1,9 +1,17 @@
+.header {
+    background-color: #151A40;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
     margin: 0 auto;
+}
+
+ul {
+    background-color: #151A40;
 }
 
 .nav-item a {

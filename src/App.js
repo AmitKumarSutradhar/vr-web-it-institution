@@ -7,6 +7,7 @@ import Main from './layouts/Main/Main';
 import Blog from './components/Blog/Blog';
 import Home from './components/Home/Home';
 import QuizDetail from './components/QuizDetails/QuizDetail';
+import Error from './components/Error/Error';
 
 function App() {
   const router = createBrowserRouter([
@@ -44,7 +45,7 @@ function App() {
     },
     {
       path: '*',
-      element: <div>Sorry.This page is not Available.</div>
+      element: <Error></Error>
     }
   ])
   return (

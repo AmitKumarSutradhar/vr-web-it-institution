@@ -12,7 +12,7 @@ const Statistics = () => {
             <ResponsiveContainer width="80%" height={300} className='mx-auto'>
                 <LineChart
                     width={500}
-                    height={200}
+                    height={300}
                     data={data.data}
                     margin={{
                         top: 10,

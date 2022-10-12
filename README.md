@@ -1,13 +1,37 @@
 # Getting Started with VR Web Dev - Bangladeshi Leading It Inistitute
 
+VR web Dev - Bangladeshi Leading It Inistitute
+
 Live Wbsite Link : [https://vr-web-dev.netlify.app/]
 
 ## Feature of our web application
 
-1.Online quiz paritcipation
-2.Learn leatest technology 
-3.Learn with fun.
+- Online quiz participation
+- Learn leatest technology 
+- Learn with fun.
 
+
+## Website Services
+
+# Home Page -
+- Home page contians different kind of information about our inistitation.
+- Features topic for strat practiceing leatest technology
+- Start button for differnt topic
+
+# Topic Page - 
+- It contains all of our latest courser and quiz topics name and information.
+- Anyone can start practicing form this page.
+
+# Statistic Page - 
+- It is create with rechart
+- It show grap of topic vs number of questions
+
+# Blog Page - 
+- It contain with three topic of react
+
+
+
+<!-- 
 
 
 # Getting Started with Create React App
@@ -79,4 +103,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

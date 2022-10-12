@@ -12,7 +12,7 @@ const Question = ({ question }) => {
         <div className="">
             <div className='question my-7 p-7 rounded-lg border border-gray-200 shadow-md'>
                 <div className="flex justify-between items-center">
-                    <h2 className='md:text-3xl text-xl font-bold text-left my-5'>Quiz { } {question.question}</h2>
+                    <h2 className='md:text-3xl text-xl font-bold text-left my-5'>Quiz { }: {question.question}</h2>
                     <div className="">
                         <div onClick={() => setOpen(!open)}>
                             {open ? <EyeIcon className="h-6 w-6 text-blue-900" /> : <EyeSlashIcon className="h-6 w-6 text-blue-900" />}

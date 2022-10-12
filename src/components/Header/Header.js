@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import './Header.css';
 import NavItem from '../NavItem/NavItem';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [open, setOpen] = useState(false);
@@ -15,7 +16,7 @@ const Header = () => {
         <div className="header text-slate-50 mb-10 w-full">
             <div className="nav-container flex justify-between py-10">
                 <div className="logo">
-                    <h2 className='text-2xl font-semibold'><span className='bg-white text-black font-bold rounded-xl p-2'>VR</span> Web Dev</h2>
+                    <h2 className='text-2xl font-semibold'><Link to='/'><span className='bg-white text-black font-bold rounded-xl p-2'>VR</span> Web Dev</Link></h2>
                 </div>
                 <nav className=''>
                     <div onClick={() => setOpen(!open)} className="h-6 w-6 md:hidden">

@@ -14,7 +14,7 @@ const Home = () => {
 
     }
     return (
-        <div className='px-20'>
+        <div className='md:px-20 px-7'>
 
             <div className="header-info ">
                 <div className="header-img w-1/2">
@@ -26,7 +26,7 @@ const Home = () => {
                     <p>Let's start today to learn new thing</p>
                 </div>
             </div>
-            <div className="quizes grid grid-cols-3 gap-12 my-8">
+            <div className="quizes grid md:grid-cols-3 gap-12 my-8">
                 {
                     allQuizes.map(quiz => <Quiz
                         key={quiz.id}

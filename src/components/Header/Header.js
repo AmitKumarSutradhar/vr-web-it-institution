@@ -12,7 +12,7 @@ const Header = () => {
         { id: 4, name: 'Blog', path: '/blog' }
     ]
     return (
-        <div className="header text-slate-50 mb-10">
+        <div className="header text-slate-50 mb-10 w-full">
             <div className="nav-container flex justify-between py-10">
                 <div className="logo">
                     <h2 className='text-2xl font-semibold'><span className='bg-white text-black font-bold rounded-xl p-2'>VR</span> Web Dev</h2>

@@ -8,8 +8,8 @@ const QuizDetail = () => {
     const questions = quizDetail.questions;
     // console.log(questions);
     return (
-        <div className='px-20'>
-            <h2 className='text-6xl my-4'>Quiz of {quizDetail.name}</h2>
+        <div className='md:px-20 px-7'>
+            <h2 className='md:text-6xl text-3xl my-4'>Quiz of {quizDetail.name}</h2>
             {
                 questions.map((question, index) => <Question
                     key={index}

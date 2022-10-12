@@ -21,7 +21,7 @@ const Header = () => {
                     <div onClick={() => setOpen(!open)} className="h-6 w-6 md:hidden">
                         {open ? <XMarkIcon /> : <Bars3Icon />}
                     </div>
-                    <ul className={`w-full md:flex sm:flex-row justify-center absolute duration-300 ease-in md:static ${open ? ' right-0' : 'top-[-500px]'}`}>
+                    <ul className={`w-full md:flex sm:flex-row justify-center absolute duration-300 ease-in md:static ${open ? 'top-[95px] left-0' : 'top-[-500px]'}`}>
                         {
                             routes.map(route => <NavItem key={route.id} route={route}></NavItem>)
                         }
